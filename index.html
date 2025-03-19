@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>OrionStarzWebServices</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/578be6a12a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/LOGO.png" alt="OrionStarzWebServices">
+                    <span class="company-name">OrionStarzWebServices</span>
+                </div>
+        
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="samples.html">Samples</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Mobile Menu Button -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h1>Welcome to OrionStarzWebServices</h1>
+                <p>Your trusted partner in web design and digital solutions</p>
+                <a href="services.html" class="btn">Explore Services</a>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                    <h3>Who We Are</h3>
+                    <p>OrionStarzWebServices is a dedicated company that specializes in creating high-quality websites and digital experiences using HTML and CSS. Our goal is to bring your vision to life through innovative design and clean, responsive coding.</p>
+                    <h3>Our Mission</h3>
+                    <p>We aim to provide businesses and individuals with modern, visually appealing, and user-friendly web solutions. Whether you need a landing page, custom UI elements, or a full website, we have you covered.</p>
+                    <h3>What We Offer</h3>
+                    <p>We offer a wide range of web development services, including website creation, landing pages, forms, UI components, email templates, animations, and website redesigns. Our focus is on delivering fast, responsive, and high-quality solutions that enhance your online presence.</p> 
+            </div>
+        
+            <div class="team">       
+                <div class="team-member">
+                    <img src="images/NyashaDesire.jpg" alt="Team member">
+                    <h3>Nyasha Desire Sadzamari</h3>
+                    <p>Web Designer</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Fill out the form below and we'll get back to you.</p>
+        
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 603 Zimdef House,fort strt Btwn 8th & 9th Ave,Bulawayo,Zimbabwe</p>
+                    <p><i class="fas fa-envelope"></i> orionstarz100@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +263774571833</p>
+                    <div class="social-icons">
+                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+        
+                <form action="contact.php" method="post"  id="contactForm" class="contact-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        
+                    <button type="submit">Send Message</button>
+                    <p id="formMessage" class="hidden">Thank you! Your message has been sent.</p>
+                </form>
+            </div>
+        </section>
+
+       
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- About Section -->
+                <div class="footer-about">
+                    <h3>About OrionStarzWebServices</h3>
+                    <p>We specialize in crafting modern, responsive, and visually appealing web solutions, including websites, UI components, email templates, and more.</p>
+                    <p>Our mission is to bring your digital vision to life with cutting-edge web technology.</p>
+                </div>
+        
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="samples.html">Samples</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 603 Zimdef House,fort strt Btwn 8th & 9th Ave,Bulawayo,Zimbabwe</p>
+                    <p><i class="fas fa-envelope"></i> orionstarz100@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +263774571833</p>
+                </div>
+        
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+        
+                <!-- Newsletter Signup -->
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with our latest services and offers.</p>
+                    <form action="contact.php" method="post" id="newsletterForm">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p id="newsletterMessage" class="hidden">Thank you for subscribing!</p>
+                </div>
+            </div>
+        
+            <!-- Footer Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 OrionStarzWebServices | All Rights Reserved</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+
+    </body>
+</html>
+
+
+
