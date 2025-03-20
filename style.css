@@ -9,9 +9,7 @@ body {
     background: #000000;
     color: #ffffff;
 }
-.maincont{
-    margin: 0%;
-}
+
 /* Header */
 .header {
     background: #000000;
@@ -19,7 +17,7 @@ body {
     justify-content: space-between;
     padding: 20px 40px;
     position: fixed;
-    width: 100%;
+    width: 768px;
     top: 0;
     left: 0;
     z-index: 1000;
