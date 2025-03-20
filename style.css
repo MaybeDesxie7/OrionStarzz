@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     padding: 20px 40px;
     position: fixed;
-    width: 480px;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -536,39 +536,7 @@ body {
         font-size: 18px;
         line-height: 1.6;
     }
-    .samples-section {
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
-        width: 80%;
-        margin: 40px auto;
-    }
-    .samples-section h2 {
-        color: limegreen;
-    }
-    .samples-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin-top: 20px;
-    }
-    .sample-item {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-    .sample-item:hover {
-        transform: scale(1.05);
-    }
-    .sample-item img {
-        width: 100%;
-        border-radius: 5px;
-    }
-    .sample-item h3 {
-        margin: 10px 0;
-        color: limegreen;
-    }
+    
     .NoteToSelf{
         color: red;
     }
