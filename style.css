@@ -6,9 +6,12 @@
 }
 
 body {
+    background: #000000;
     color: #ffffff;
 }
-
+.maincont{
+    margin: 0%;
+}
 /* Header */
 .header {
     background: #000000;
