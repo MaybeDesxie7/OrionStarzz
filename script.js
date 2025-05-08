@@ -152,4 +152,69 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(card);
     });
   });
+  document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.querySelector(".hero-section");
+  
+    if (hero) {
+      hero.classList.add("fade-in-animation");
+    }
+  });
+  ScrollReveal().reveal('.hero-title', {
+    origin: 'top',
+    distance: '40px',
+    duration: 1000,
+    delay: 200,
+    reset: false
+  });
+  
+  ScrollReveal().reveal('.hero-subtitle', {
+    origin: 'bottom',
+    distance: '30px',
+    duration: 1000,
+    delay: 400,
+    reset: false
+  });
+  
+  ScrollReveal().reveal('.hero-buttons', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 1000,
+    delay: 600,
+    reset: false
+  });
+  
+  ScrollReveal().reveal('.hero-image-container', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 1200,
+    delay: 800,
+    reset: false
+  });
+// Animate on scroll
+const heroContent = document.querySelector('.hero-content');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    heroContent.classList.add('animate');
+  }
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText.replace(/\D/g, '');
+        const increment = Math.ceil(target / 100);
+  
+        if (current < target) {
+          counter.innerText = current + increment + '+';
+          setTimeout(updateCount, 50);
+        } else {
+          counter.innerText = target + (counter.innerText.includes('%') ? '%' : counter.innerText.includes('/') ? '/7' : '+');
+        }
+      };
+  
+      updateCount();
+    });
+  });
   

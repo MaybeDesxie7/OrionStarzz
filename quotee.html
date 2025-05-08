@@ -1,0 +1,248 @@
+<!-- QUOTE FORM SECTION -->
+<section class="quote-section" id="quote">
+    <div class="quote-container">
+      <h2>Request a Custom Quote</h2>
+      <form id="quote-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+  
+        <label>Select Features:</label>
+        <div class="checkbox-group">
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Basic Website">
+              <span>Basic Website (1–3 Pages) - $50</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Extra Pages">
+              <span>Extra Pages - $15 per page</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Mobile Responsiveness">
+              <span>Mobile Responsiveness - $20</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Basic SEO">
+              <span>Basic SEO Optimization - $25</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Advanced SEO">
+              <span>Advanced SEO - $40</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Contact Form">
+              <span>Contact Form - $20</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="WhatsApp Chat">
+              <span>WhatsApp Chat Integration - $20</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Google Maps">
+              <span>Google Maps Embed - $10</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Portfolio">
+              <span>Portfolio / Image Gallery - $15</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Custom Animations">
+              <span>Custom Animations - average $20</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Background Video">
+              <span>Background Video/GIF - $10</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Google Analytics">
+              <span>Google Analytics Setup - $15</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-item">
+              <input type="checkbox" name="features" value="Domain Setup">
+              <span>Domain & SSL Setup - $30</span>
+            </label>
+          </div>
+        </div>
+  
+        <label for="pages">If Extra Pages, How Many?</label>
+        <input type="number" name="extra-pages" id="extra-pages" min="0" value="0" />
+  
+        <textarea name="details" placeholder="Any specific instructions..." rows="4"></textarea>
+  
+        <div id="quote-total"><strong>Total: $0</strong></div>
+  
+        <button type="submit">Get Quote</button>
+      </form>
+      <p id="form-status"></p>
+    </div>
+  </section>
+  
+  <!-- Include this in your JS file -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const featurePrices = {
+      "Basic Website": 50,
+      "Extra Pages": 15,
+      "Mobile Responsiveness": 20,
+      "Basic SEO": 25,
+      "Advanced SEO": 40,
+      "Contact Form": 20,
+      "WhatsApp Chat": 20,
+      "Google Maps": 10,
+      "Portfolio": 15,
+      "Custom Animations": 20,
+      "Background Video": 10,
+      "Google Analytics": 15,
+      "Domain Setup": 30
+    };
+  
+    const form = document.getElementById('quote-form');
+    const totalDisplay = document.getElementById('quote-total');
+    const extraPagesInput = document.getElementById('extra-pages');
+    const statusDisplay = document.getElementById('form-status');
+  
+    function calculateTotal() {
+      let total = 0;
+      const selected = form.querySelectorAll('input[type="checkbox"]:checked');
+  
+      selected.forEach(input => {
+        const value = input.value;
+        total += featurePrices[value] || 0;
+      });
+  
+      const extraPages = parseInt(extraPagesInput.value) || 0;
+      if (extraPages > 0) {
+        total += extraPages * featurePrices["Extra Pages"];
+      }
+  
+      totalDisplay.innerHTML = `<strong>Total: $${total}</strong>`;
+      return total;
+    }
+  
+    form.addEventListener('change', calculateTotal);
+    extraPagesInput.addEventListener('input', calculateTotal);
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const details = formData.get("details");
+      const extraPages = formData.get("extra-pages");
+      const features = form.querySelectorAll('input[type="checkbox"]:checked');
+  
+      let selectedFeatures = [];
+      features.forEach(f => selectedFeatures.push(f.value));
+  
+      const total = calculateTotal();
+  
+      const message = `Quote Request\nName: ${name}\nEmail: ${email}\nFeatures: ${selectedFeatures.join(", ")}\nExtra Pages: ${extraPages}\nTotal: $${total}\nDetails: ${details}`;
+  
+      try {
+        const res = await fetch("https://formspree.io/f/your_form_id", {
+          method: "POST",
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+  
+        if (res.ok) {
+          statusDisplay.textContent = "Quote sent! Please check your email.";
+          form.reset();
+          calculateTotal();
+        } else {
+          statusDisplay.textContent = "Something went wrong. Try again later.";
+        }
+      } catch (err) {
+        statusDisplay.textContent = "Failed to send quote.";
+      }
+    });
+  });
+  </script>
+  
+  <!-- Add to your CSS -->
+  <style>
+  .quote-section {
+    padding: 60px 20px;
+    background: #000;
+    color: #00ff99;
+    text-align: center;
+  }
+  
+  .quote-container {
+    max-width: 700px;
+    margin: auto;
+    background: #111;
+    border: 1px solid #00ff99;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.1);
+  }
+  
+  #quote-form input,
+  #quote-form select,
+  #quote-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #00ff99;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  #quote-form button {
+    background: #00ff99;
+    color: #000;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #quote-form button:hover {
+    background: #00ffcc;
+  }
+  
+  #quote-total {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #00ff99;
+  }
+  
+  .checkbox-group {
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .checkbox-item {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  </style>
+  
