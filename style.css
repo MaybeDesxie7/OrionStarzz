@@ -1026,7 +1026,7 @@ hr {
     padding: 2rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px rgba(0, 255, 153, 0.1);
-  }*/
+  }
   #particles-js {
     position: absolute;
     width: 100%;
@@ -1069,5 +1069,92 @@ hr {
     font-size: 2rem;
     color: #00ff99;
     margin-bottom: 0.5rem;
-  }
+  }*/
+  /* Quote Section */
+.quote-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #111;
+  color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.quote-section h1 {
+  font-size: 2.5rem;
+  color: #b6ff00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.quote-section p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #cfcfcf;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #b6ff00;
+  outline: none;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.form-group p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #b6ff00;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d1ff4f;
+}
+
+strong {
+  font-size: 1.5rem;
+  color: #b6ff00;
+}
+
   
