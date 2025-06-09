@@ -368,6 +368,9 @@ hr {
     color: #110e0e;
     margin-bottom: 40px;
 }
+.about-content h3,li{
+  color: #000;
+}
 
 /* Team Section */
 .team {
