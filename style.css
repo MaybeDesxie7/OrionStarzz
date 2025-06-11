@@ -5,16 +5,6 @@
     font-family: "Arial", sans-serif;
 }
 
-/*body {
-    background: #000000;
-    color: #ffffff;
-}
-@media(max-width:768px){
-    .body{max-width: 768px;
-    }
-}*/
-/* Header */
-/* ===== Global Styles ===== */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -345,32 +335,6 @@ hr {
 .btn:hover {
     background: darkgreen;
 }
-.about {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.about h2 {
-    font-size: 2.5em;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.about p {
-    font-size: 1.2em;
-    color: #110e0e;
-    margin-bottom: 40px;
-}
-.about-content h3,li{
-  color: #000;
-}
 
 /* Team Section */
 .team {
@@ -698,48 +662,250 @@ hr {
     font-size: 14px;
 }
 
-.pricing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
+/* === Pricing Page Styles === */
+
+.pricing-section {
+  background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+  color: #fff;
+  padding: 80px 20px;
 }
+
+.pricing-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.pricing-header h1 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-header .pricing-subtitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 50px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
 .pricing-card {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
-    transition: transform 0.3s;
+  background: #111;
+  border: 1px solid #00ff88;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  padding: 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .pricing-card:hover {
-    transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
 }
-.price {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    color: limegreen;
+
+.pricing-card h2 {
+  color: #00ff88;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
-.PricingHeader{
-    display: flex;
-    text-align: center;
+
+.pricing-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.pricing-card .price {
+  font-size: 1.8rem;
+  color: #00ff88;
+  margin: 20px 0;
+}
+
+.pricing-card button {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card button:hover {
+  background-color: #00cc6a;
+}
+
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
     align-items: center;
+  }
 }
-    .about-section {
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
-        width: 70%;
-        margin: 40px auto;
-    }
-    .about-section h2 {
-        color: limegreen;
-    }
-    .about-section p {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-    
+
+  .orion-about-section {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+.orion-about-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.orion-about-header h1 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  margin-bottom: 0.5rem;
+}
+
+.orion-about-header .orion-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 50px;
+}
+
+.orion-about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.orion-about-card {
+  flex: 1 1 300px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 360px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orion-about-card .orion-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orion-about-card h2 {
+  font-size: 1.5rem;
+  color: #00ff88;
+  margin-bottom: 1rem;
+}
+
+.orion-about-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.orion-about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+}
+
+/* Animation */
+.orion-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: orionFadeInUp 1s ease forwards;
+}
+
+.orion-fade-in.orion-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.orion-fade-in.orion-delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes orionFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .orion-about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .orion-about-card {
+    width: 100%;
+  }
+}
+
+/* Slideshow inside card */
+.orion-slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.orion-slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.orion-slide-image.orion-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Ensure overlay appears above slideshow */
+.orion-about-card .orion-overlay {
+  position: relative;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
     .NoteToSelf{
         color: red;
     }
@@ -1024,6 +1190,127 @@ button[type="submit"]:hover {
 strong {
   font-size: 1.5rem;
   color: #b6ff00;
+}
+/* Blog Page Styles */
+.main-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.blog-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-card {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid limegreen;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+.blog-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.blog-card h2 a {
+  color: limegreen;
+  text-decoration: none;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.blog-card p {
+  color: #ccc;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: limegreen;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.blog-section {
+  position: relative;
+  background: url('images/absolutvision-WYd_PkCa1BY-unsplash.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.blog-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.blog-slider {
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.blog-track {
+  display: flex;
+  animation: scrollBlogs 10s linear infinite;
+}
+
+.blog-card {
+  min-width: 300px;
+  margin: 0 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.blog-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #00ff88;
+}
+
+.blog-card p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+@keyframes scrollBlogs {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.blog-cta {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #00ff88;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.blog-cta:hover {
+  background-color: #00cc66;
+}
+.blog-section .load-more,
+.blog-slider .load-more,
+.load-more-posts,
+.load-more {
+  display: none !important;
 }
 
   

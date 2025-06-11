@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Add "Load More" button
-    const loadMoreBtn = document.createElement("button");
-    loadMoreBtn.textContent = "Load More Posts";
-    loadMoreBtn.classList.add("load-more-btn");
-    loadMoreBtn.style.cssText = "margin-top:20px; padding: 10px 15px; font-size: 1rem; cursor: pointer; border: none; background: limegreen; color: white; border-radius: 5px;";
+    //const loadMoreBtn = document.createElement("button");
+    //loadMoreBtn.textContent = "Load More Posts";
+    //loadMoreBtn.classList.add("load-more-btn");
+    //loadMoreBtn.style.cssText = "margin-top:20px; padding: 10px 15px; font-size: 1rem; cursor: pointer; border: none; background: limegreen; color: white; border-radius: 5px;";
     
     loadMoreBtn.addEventListener("click", loadMoreBlogs);
     document.querySelector(".blog-section").appendChild(loadMoreBtn);
@@ -217,4 +217,17 @@ window.addEventListener('scroll', () => {
       updateCount();
     });
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+  const slideContainers = document.querySelectorAll(".orion-slideshow-container");
+
+  slideContainers.forEach(container => {
+    const slides = container.querySelectorAll(".orion-slide-image");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      slides[currentIndex].classList.remove("orion-active");
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("orion-active");
+    }, 3000); // Change every 3 seconds
+  });
+});

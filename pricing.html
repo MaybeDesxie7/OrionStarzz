@@ -56,134 +56,59 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="images/LOGO.png" alt="OrionStarz Web Services company logo" />
-        <span class="company-name">OrionStarzWebServices</span>
-      </div>
-      <nav class="nav">
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
+    <h1 class="page-title">Our Pricing Plans</h1>
+    <p class="page-subtitle">Affordable & Transparent Rates for Every Service</p>
   </header>
 
-  <main>
-    <section class="pricing-section">
-      <h1>Our Pricing Plans</h1>
+  <section class="pricing-section">
+    <div class="pricing-container">
 
-      <div class="pricing-grid">
-
-        <!-- Starter Plan -->
-        <div class="pricing-card">
-          <h2>🔹 Starter Plan – $120</h2>
-          <p>Perfect for personal brands, consultants & simple businesses</p>
-          <ul>
-            <li>1-page custom responsive website (HTML/CSS/JS)</li>
-            <li>Contact form with email integration</li>
-            <li>Mobile-first design</li>
-            <li>Custom colors, fonts, and branding</li>
-            <li>WhatsApp chat integration</li>
-            <li>Basic animations and icons</li>
-            <li>Free .site/.tech domain (1 year)</li>
-            <li>1-month Hostinger hosting</li>
-            <li>Basic SSL setup</li>
-            <li>1-month support (minor edits)</li>
-          </ul>
-          <p><strong>Add-ons:</strong></p>
-          <ul>
-            <li>Extra page: $20/page</li>
-            <li>Domain email: $10</li>
-            <li>Logo design: $25</li>
-            <li>Performance optimization: $15</li>
-            <li>Google Maps embed: $5</li>
-          </ul>
-        </div>
-
-        <!-- Business Plan -->
-        <div class="pricing-card">
-          <h2>🔸 Business Plan – $220</h2>
-          <p>Ideal for growing businesses, startups, and service providers</p>
-          <ul>
-            <li>Everything in Starter Plan</li>
-            <li>Up to 5 custom pages</li>
-            <li>Advanced quote/contact forms</li>
-            <li>Smooth scrolling, animations</li>
-            <li>Testimonials section</li>
-            <li>Google Maps embed</li>
-            <li>Domain email setup (1 account)</li>
-            <li>Enhanced performance optimization</li>
-            <li>Free .com or .co.zw domain (1 year)</li>
-            <li>3 months Hostinger hosting</li>
-            <li>Premium SSL setup</li>
-            <li>3 months free updates</li>
-          </ul>
-          <p><strong>Add-ons:</strong></p>
-          <ul>
-            <li>Logo design/redesign: $25</li>
-            <li>Blog integration: $20</li>
-            <li>WhatsApp automation: $10</li>
-            <li>SEO Starter Pack: $30</li>
-          </ul>
-        </div>
-
-        <!-- Premium Plan -->
-        <div class="pricing-card">
-          <h2>🔶 Premium Plan – $400</h2>
-          <p>For eCommerce-ready, advanced, and high-converting sites</p>
-          <ul>
-            <li>Everything in Business Plan</li>
-            <li>Up to 10 fully custom pages</li>
-            <li>eCommerce-ready product pages (no payment yet)</li>
-            <li>Quote calculator integration</li>
-            <li>Basic admin dashboard setup</li>
-            <li>Live chat integration (Facebook/Tawk.to)</li>
-            <li>Advanced animations & polish</li>
-            <li>Embedded videos and galleries</li>
-            <li>On-page SEO setup</li>
-            <li>Full HTTPS & security hardening</li>
-            <li>Backup scripts & performance audit</li>
-            <li>6 months Premium hosting</li>
-            <li>Free .com domain (1 year)</li>
-            <li>6 months site edits & priority support</li>
-          </ul>
-          <p><strong>Add-ons:</strong></p>
-          <ul>
-            <li>PayPal checkout: $30</li>
-            <li>Admin CMS blog panel: $35</li>
-            <li>MySQL database: $25</li>
-            <li>Maintenance plan: $99/year</li>
-          </ul>
-        </div>
-
-        <!-- Ongoing Services -->
-        <div class="pricing-card">
-          <h2>📦 Optional Ongoing Services</h2>
-          <ul>
-            <li>Hosting renewal (Premium): $5.99/month</li>
-            <li>Maintenance (monthly): $15/month</li>
-            <li>Domain renewal (.com): $12/year</li>
-            <li>Upgrade to full CMS or WordPress: <em>Custom Quote</em></li>
-          </ul>
-        </div>
-
+      <!-- Web Development Plan -->
+      <div class="pricing-card">
+        <i class="fas fa-laptop-code pricing-icon"></i>
+        <h3 class="pricing-title">Website Development</h3>
+        <p class="pricing-price">Starting at $120</p>
+        <ul class="pricing-features">
+          <li>Modern UI Design</li>
+          <li>Mobile Responsive</li>
+          <li>5 Pages Included</li>
+          <li>SEO Ready</li>
+        </ul>
+        <button class="pricing-btn" onclick="requestQuote('Website Development')">Get Quote</button>
       </div>
-    </section>
 
-    <div class="NoteToSelf">
-      <p><strong>Note:</strong> Final prices depend on exact features and functionality. Contact us for a personalized quote!</p>
+      <!-- Web Hosting Plan -->
+      <div class="pricing-card">
+        <i class="fas fa-server pricing-icon"></i>
+        <h3 class="pricing-title">Web Hosting</h3>
+        <p class="pricing-price">$4.99/month + $15 setup</p>
+        <ul class="pricing-features">
+          <li>99.9% Uptime</li>
+          <li>Free SSL & Email</li>
+          <li>Domain Configuration</li>
+          <li>Managed by Us</li>
+        </ul>
+        <button class="pricing-btn" onclick="requestQuote('Web Hosting')">Get Hosting</button>
+      </div>
+
+      <!-- Digital Marketing Plan -->
+      <div class="pricing-card">
+        <i class="fas fa-bullhorn pricing-icon"></i>
+        <h3 class="pricing-title">Digital Marketing</h3>
+        <p class="pricing-price">From $80/month</p>
+        <ul class="pricing-features">
+          <li>Facebook & Google Ads</li>
+          <li>Social Media Management</li>
+          <li>Email Campaigns</li>
+          <li>Analytics Reporting</li>
+        </ul>
+        <button class="pricing-btn" onclick="requestQuote('Digital Marketing')">Start Campaign</button>
+      </div>
+
     </div>
-  </main>
+  </section>
 
   <script src="script.js"></script>
-  <script src="//code.tidio.co/fqllaia5kfwi50o0e7flb5kjunihbscb.js" async></script>
 </body>
+
 </html>

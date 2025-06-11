@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Blog | OrionStarzWebServices</title>
+  <meta name="description" content="Read helpful web design and digital tips from OrionStarzWebServices, based in Bulawayo, Zimbabwe.">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .filter-input {
+      padding: 0.6rem 1rem;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background: #222;
+      color: #fff;
+      box-shadow: 0 0 5px limegreen;
+    }
+
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .pagination button {
+      background: limegreen;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      margin: 0 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .pagination button:disabled {
+      background: #444;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <h1>📝 Our Blog</h1>
+    <p>Tips, updates & advice from OrionStarzWebServices — helping businesses thrive online.</p>
+  </header>
+
+  <main class="blog-list">
+
+    <div class="filter-bar">
+      <input type="text" id="searchInput" class="filter-input" placeholder="Search blog posts...">
+    </div>
+
+    <!-- Blog Posts -->
+    <div id="blogContainer">
+      <article class="blog-card">
+        <img src="images/out-pexels-designecologist-1779487.jpg" alt="Benefits of websites for small businesses" class="blog-image" />
+        <h2><a href="10-reasons-every-small-business-needs-a-website.html">10 Reasons Every Small Business Needs a Website</a></h2>
+        <p class="blog-meta">Published by OrionStarzWebServices • Expert Web Design Insights</p>
+        <p>Still wondering if a website is necessary for your business? Here are 10 powerful reasons why your small business can't afford to go without one.</p>
+        <a href="10-reasons-every-small-business-needs-a-website.html" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <img src="images/out-pexels-markus-winkler-1430818-4160089.jpg" alt="Choosing the right domain name" class="blog-image" />
+        <h2><a href="how-to-choose-the-right-domain-name.html">How to Choose the Right Domain Name for Your Brand</a></h2>
+        <p class="blog-meta">Published by OrionStarzWebServices • Web Strategy Tips</p>
+        <p>Your domain name is your digital identity. Learn the most effective tips for picking the perfect domain for your brand and online growth.</p>
+        <a href="how-to-choose-the-right-domain-name.html" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <img src="images/out-pexels-mikhail-nilov-6973095.jpg" alt="User-friendly website interface" class="blog-image" />
+        <h2><a href="what-makes-a-website-user-friendly-in-2025.html">What Makes a Website User Friendly in 2025?</a></h2>
+        <p class="blog-meta">Published by OrionStarzWebServices • UX & Web Design Tips</p>
+        <p>User experience is everything in 2025. Learn the modern principles and must-have features that make a website truly user-friendly and conversion-ready.</p>
+        <a href="what-makes-a-website-user-friendly-in-2025.html" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <img src="images/out-pexels-divinetechygirl-1181307 (3).jpg" alt="Fast loading website graphic" class="blog-image" />
+        <h2><a href="best-practices-for-fast-website-loading-speeds.html">Best Practices for Fast Website Loading Speeds</a></h2>
+        <p class="blog-meta">Published by OrionStarzWebServices • Web Performance Tips</p>
+        <p>Slow websites kill conversions. Learn proven strategies to make your site load in under 3 seconds and improve SEO, user experience, and mobile performance.</p>
+        <a href="best-practices-for-fast-website-loading-speeds.html" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <img src="images/out-pexels-pixabay-39559.jpg" alt="Mobile responsive web design" class="blog-image" />
+        <h2><a href="the-role-of-mobile-responsiveness-in-modern-web-design.html">The Role of Mobile Responsiveness in Modern Web Design</a></h2>
+        <p class="blog-meta">Published by OrionStarzWebServices • Web Design Insights</p>
+        <p>Explore why mobile responsiveness is no longer optional in web design. Learn how mobile-first design can improve user experience, search rankings, and conversion rates.</p>
+        <a href="the-role-of-mobile-responsiveness-in-modern-web-design.html" class="read-more">Read More →</a>
+      </article>
+
+      <!-- Add more blog-card articles here as needed -->
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+  </main>
+
+  <footer style="text-align:center; padding: 2rem; background: #111; color: #888;">
+    <p>&copy; 2025 OrionStarzWebServices • Bulawayo, Zimbabwe</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const blogCards = document.querySelectorAll('.blog-card');
+    const blogContainer = document.getElementById('blogContainer');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    let currentPage = 1;
+    const blogsPerPage = 5;
+
+    function showPage(page) {
+      const start = (page - 1) * blogsPerPage;
+      const end = page * blogsPerPage;
+      blogCards.forEach((card, index) => {
+        card.style.display = (index >= start && index < end) ? 'block' : 'none';
+      });
+
+      prevBtn.disabled = page === 1;
+      nextBtn.disabled = end >= blogCards.length;
+    }
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      blogCards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        const content = card.querySelector('p').textContent.toLowerCase();
+        const matches = title.includes(filter) || content.includes(filter);
+        card.style.display = matches ? 'block' : 'none';
+      });
+
+      // Hide pagination when searching
+      document.querySelector('.pagination').style.display = searchInput.value ? 'none' : 'block';
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentPage++;
+      showPage(currentPage);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentPage--;
+      showPage(currentPage);
+    });
+
+    // Initialize
+    showPage(currentPage);
+  </script>
+</body>
+</html>
