@@ -28,8 +28,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 0; /* Set a low z-index */
+  pointer-events: none; /* Allow clicks to go through it */
 }
+
 
 .hero-content {
   position: relative;
@@ -295,32 +297,6 @@ hr {
         display: block;
     }
 }
-.home {
-    background: url('images/Stars.gif.gif') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.home-content {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.home h1 {
-    font-size: 2.0em;
-    margin-bottom: 10px;
-}
-
-.home p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -334,40 +310,6 @@ hr {
 
 .btn:hover {
     background: darkgreen;
-}
-
-/* Team Section */
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.team-member {
-    background: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.team-member h3 {
-    font-size: 1.5em;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.team-member p {
-    font-size: 1em;
-    color: #555;
 }
 /* Contact Section */
 .contact-section {
@@ -436,109 +378,13 @@ hr {
 .social-icons .whatsapp:hover { color: rgb(74, 216, 74); }
 .social-icons .youtube:hover { color: rgb(253, 73, 73); }
 
-/* Contact Form */
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: limegreen;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.contact-form button:hover {
-    background: darkgreen;
-}
-
-/* Form Message */
-.hidden {
-    display: none;
-    color: green;
-    font-size: 1rem;
-    margin-top: 10px;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         align-items: center;
-    }
-}
-
-
-.pricing-section {
-    background-size: cover;
-    background-position: center;
-    padding: 4rem 0;
-    color: rgba(255, 255, 255, 0.9); /* Transparent text */
-}
-
-.pricing-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.pricing-table {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
-
-.pricing-option {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for pricing options */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    color: rgba(0, 0, 0, 0.8); /* Darker text inside the box */
-}
-
-.pricing-option h2 {
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.pricing-option ul {
-    text-align: left;
-    margin-top: 1rem;
-}
-
-.pricing-option li {
-    margin: 0.5rem 0;
-}
-
-.pricing-option p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-}
-
-
+    }}
 #services {
     display: flex;
     flex-wrap: wrap;
@@ -813,10 +659,6 @@ hr {
   flex-direction: column;
   justify-content: center;
 }
-
-    .NoteToSelf{
-        color: red;
-    }
     .contact-banner {
         background: url('images/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg') no-repeat center center/cover;
         height: 40vh;
@@ -1093,106 +935,6 @@ hr {
 .load-more-posts,
 .load-more {
   display: none !important;
-}
-
-  /* === OrionStarz Footer Styling === */
-
-.osws-footer {
-  background-color: #111;
-  color: #f5f5f5;
-  padding: 60px 20px 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.osws-footer-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1300px;
-  margin: auto;
-  gap: 30px;
-}
-
-.osws-footer-about,
-.osws-footer-links,
-.osws-footer-contact,
-.osws-footer-social {
-  flex: 1 1 250px;
-  min-width: 250px;
-}
-
-.osws-footer h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #00ff99;
-}
-
-.osws-footer p,
-.osws-footer a,
-.osws-footer li {
-  color: #ccc;
-  font-size: 15px;
-  line-height: 1.6;
-  text-decoration: none;
-}
-
-.osws-footer a:hover {
-  color: #00ff99;
-}
-
-.osws-footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.osws-footer-links li {
-  margin-bottom: 10px;
-}
-
-.osws-footer-contact i,
-.osws-social-icons i {
-  margin-right: 8px;
-  color: #00ff99;
-}
-
-.osws-social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.osws-social-icons a {
-  display: inline-block;
-  background-color: #1e1e1e;
-  color: #f5f5f5;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.osws-social-icons a:hover {
-  background-color: #00ff99;
-  color: #111;
-  transform: scale(1.1);
-}
-
-.osws-footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #aaa;
-  border-top: 1px solid #222;
-  margin-top: 40px;
-}
-
-/* Responsive Footer */
-@media screen and (max-width: 768px) {
-  .osws-footer-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
 }
 .footer {
     background: #000000;
