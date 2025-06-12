@@ -115,24 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    const newsletterForm = document.getElementById("newsletterForm");
-    const newsletterMessage = document.getElementById("newsletterMessage");
+//document.addEventListener("DOMContentLoaded", function () {
+   // const newsletterForm = document.getElementById("newsletterForm");
+    //const newsletterMessage = document.getElementById("newsletterMessage");
 
-    newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent actual form submission
+    //newsletterForm.addEventListener("submit", function (event) {
+       // event.preventDefault(); // Prevent actual form submission
 
-        newsletterMessage.classList.remove("hidden"); // Show success message
+        //newsletterMessage.classList.remove("hidden"); // Show success message
 
         // Optional: Clear the email input
-        document.getElementById("newsletterEmail").value = "";
+        //document.getElementById("newsletterEmail").value = "";
 
         // Hide message after 3 seconds
-        setTimeout(() => {
-            newsletterMessage.classList.add("hidden");
-        }, 3000);
-    });
-});
+        //setTimeout(() => {
+         //   newsletterMessage.classList.add("hidden");
+       // }, 3000);
+   // });
+//});
 
 
 document.addEventListener("DOMContentLoaded", function () {
