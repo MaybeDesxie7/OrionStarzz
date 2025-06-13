@@ -1024,5 +1024,26 @@ hr {
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
+/* Add this to your style.css before minifying */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.error-container h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.error-container .btn {
+  background: limegreen;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
 
 
