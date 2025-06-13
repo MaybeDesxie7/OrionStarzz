@@ -88,12 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".load-more-btn").style.display = "none"; // Hide button after loading
     }
 
-    // Add "Load More" button
-    //const loadMoreBtn = document.createElement("button");
-    //loadMoreBtn.textContent = "Load More Posts";
-    //loadMoreBtn.classList.add("load-more-btn");
-    //loadMoreBtn.style.cssText = "margin-top:20px; padding: 10px 15px; font-size: 1rem; cursor: pointer; border: none; background: limegreen; color: white; border-radius: 5px;";
-    
     loadMoreBtn.addEventListener("click", loadMoreBlogs);
     document.querySelector(".blog-section").appendChild(loadMoreBtn);
 });
@@ -115,25 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     });
 });
-//document.addEventListener("DOMContentLoaded", function () {
-   // const newsletterForm = document.getElementById("newsletterForm");
-    //const newsletterMessage = document.getElementById("newsletterMessage");
-
-    //newsletterForm.addEventListener("submit", function (event) {
-       // event.preventDefault(); // Prevent actual form submission
-
-        //newsletterMessage.classList.remove("hidden"); // Show success message
-
-        // Optional: Clear the email input
-        //document.getElementById("newsletterEmail").value = "";
-
-        // Hide message after 3 seconds
-        //setTimeout(() => {
-         //   newsletterMessage.classList.add("hidden");
-       // }, 3000);
-   // });
-//});
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll('.service-card');
