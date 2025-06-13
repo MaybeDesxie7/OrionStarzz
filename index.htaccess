@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^orionstarzwebservices\.tech [NC]
-RewriteRule ^(.*)$ https://www.orionstarzwebservices.tech/$1 [L,R=301]

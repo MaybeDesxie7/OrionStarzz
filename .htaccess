@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^orionstarzwebservices\.tech [NC]
+RewriteRule ^(.*)$ https://www.orionstarzwebservices.tech/$1 [L,R=301]
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Allow .xml to be read properly
+AddType application/xml .xml

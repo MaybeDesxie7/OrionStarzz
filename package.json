@@ -1,0 +1,15 @@
+{
+  "name": "my-web-project",
+  "version": "1.0.0",
+  "description": "Web project with PostCSS and PurgeCSS",
+  "scripts": {
+    "build:css": "postcss style.css -o style.min.css"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.0",
+    "postcss-cli": "^9.1.0",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.1.0",
+    "@fullhuman/postcss-purgecss": "^4.0.3"
+  }
+}
